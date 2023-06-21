@@ -1,0 +1,328 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://rithousing.com/unitType.schema.json",
+    "title": "Unit Type Data for RIT Housing Comparison Website - links back to the parent Apartment Complex",
+    "description": "All the data for every apartment complex and unit type used in this website.",
+    "type": "object",
+    "properties": {
+        "unitType": {
+            "description": "The name of the unit",
+            "type": "string"
+        },
+        "shared": {
+            "description": "Is this unit shared with roommates?",
+            "type": "boolean"
+        },
+        "bedrooms": {
+            "description": "Number of bedrooms in the unit",
+            "type": "integer"
+        },
+        "bathrooms": {
+            "description": "Number of bathrooms in the unit",
+            "type": "integer"
+        },
+        "floorplanFile": {
+            "description": "Path to floorplan file on disk",
+            "type": "string"
+        },
+        "floorplanUrl": {
+            "description": "Url link to floorplan file from apartment website",
+            "type": "string"
+        },
+        "description": {
+            "description": "Description of the unit. Index 0 is short, Index 1 is long",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 2,
+            "maxItems": 2,
+            "uniqueItems": true
+        },
+        "topAmenities": {
+            "description": "The 4 top amenities in this unit",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "amenityName": {
+                        "description": "name of the amenity",
+                        "type": "string"
+                    },
+                    "amenityDescription": {
+                        "description": "Description of the amenity",
+                        "type": "string"
+                    },
+                    "amenityIcon": {
+                        "description": "  icon for the amenity",
+                        "type": "string"
+                    }
+                },
+                "required": ["amenityName","amenityDescription", "amenityIcon"]
+            },
+            "minItems": 4,
+            "maxItems": 4
+        },
+        "unitAmenities": {
+            "description": "All amentities for the unit (not the apartment complex)",
+            "type": "object",
+            "properties": {
+                "type": "object",
+                "accessibility": {
+                    "description": "Accessibility accomodations",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "accomodationName": {
+                                "description": "name of the accessibility accomodation",
+                                "type": "string"
+                            },
+                            "accomodationDescription": {
+                                "description": "Description of the accomodation",
+                                "type": "string"
+                            },
+                            "accomodationIcon": {
+                                "description": "  icon for the accessibility accomodation",
+                                "type": "string"
+                            }
+                        },
+                        "required": ["accomodationName","accomodationDescription", "accomodationIcon"]
+                    }
+                },
+                "laundry": {
+                    "description": "A list of appliances that are provided in the in-unit laundry room",
+                    "type": "object",
+                    "properties": {
+                        "washingMachine": {
+                            "description": "Is a Washing Machine in the unit?",
+                            "type": "boolean"
+                        },
+                        "dryer": {
+                            "description": "Is a Dryer in the unit?",
+                            "type": "boolean"
+                        },
+                        "note": {
+                            "description": "Any other details about the in-unit laundry?",
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                },
+                "kitchen": {
+                    "description": "A list of appliances that are provided in the in-unit kitchen",
+                    "type": "object",
+                    "properties": {
+                        "oven": {
+                            "description": "Is a Oven in the unit?",
+                            "type": "boolean"
+                        },
+                        "stove": {
+                            "description": "Is a Stove in the unit?",
+                            "type": "boolean"
+                        },
+                        "range": {
+                            "description": "Is a Range in the unit?",
+                            "type": "boolean"
+                        },
+                        "dishwasher": {
+                            "description": "Is a Dishwasher in the unit?",
+                            "type": "boolean"
+                        },
+                        "sink": {
+                            "description": "Is a Sink in the unit?",
+                            "type": "boolean"
+                        },
+                        "garbageDisposal": {
+                            "description": "Is a Garbage Disposal in the unit?",
+                            "type": "boolean"
+                        },
+                        "island": {
+                            "description": "Is a kitchen Island in the unit?",
+                            "type": "boolean"
+                        },
+                        "refrigerator": {
+                            "description": "Is a Refrigerator in the unit?",
+                            "type": "boolean"
+                        },
+                        "microwave": {
+                            "description": "Is a microwave in the unit?",
+                            "type": "boolean"
+                        },
+                        "note": {
+                            "description": "Any other details about the in-unit laundry?",
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                },
+                "furniture": {
+                    "description": "All furniture in the unit",
+                    "type": "object",
+                    "properties": {
+                        "bedroom": {
+                            "description": "Furniture in the bedroom",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "amenityName": {
+                                        "description": "name of the amenity",
+                                        "type": "string"
+                                    },
+                                    "amenityDescription": {
+                                        "description": "Description of the amenity",
+                                        "type": "string"
+                                    },
+                                    "amenityIcon": {
+                                        "description": "  icon for the amenity",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": ["amenityName","amenityDescription", "amenityIcon"]
+                            }
+                        },
+                        "bathroom": {
+                            "description": "Furniture in the bathroom",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "amenityName": {
+                                        "description": "name of the amenity",
+                                        "type": "string"
+                                    },
+                                    "amenityDescription": {
+                                        "description": "Description of the amenity",
+                                        "type": "string"
+                                    },
+                                    "amenityIcon": {
+                                        "description": "  icon for the amenity",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": ["amenityName","amenityDescription", "amenityIcon"]
+                            }
+                        },
+                        "commonArea": {
+                            "description": "Furniture in the living room/ hallways/ common areas",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "amenityName": {
+                                        "description": "name of the amenity",
+                                        "type": "string"
+                                    },
+                                    "amenityDescription": {
+                                        "description": "Description of the amenity",
+                                        "type": "string"
+                                    },
+                                    "amenityIcon": {
+                                        "description": "  icon for the amenity",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": ["amenityName","amenityDescription", "amenityIcon"]
+                            }
+                        }
+                    },
+                    "required": ["bedroom"]
+                },
+                "amenities": {
+                    "description": "All amentities for the unit (not the apartment complex)",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amenityName": {
+                                "description": "name of the amenity",
+                                "type": "string"
+                            },
+                            "amenityDescription": {
+                                "description": "Description of the amenity",
+                                "type": "string"
+                            },
+                            "amenityIcon": {
+                                "description": "  icon for the amenity",
+                                "type": "string"
+                            }
+                        },
+                        "required": ["amenityName","amenityDescription", "amenityIcon"]
+                    }
+                }
+            },
+            "required": ["amenities"]
+        },
+        "rentCost": {
+            "description": "Cost of rent for this unit type",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "timestamp": {
+                        "description": "Timestamp of recorded change in price: yyyy-mm-dd hh:mm:ss",
+                        "type": "string",
+                        "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]$"
+                    },
+                    "minCost": {
+                        "description": "Minimum average cost of rent",
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                    },
+                    "maxCost": {
+                        "description": "Maximum average cost of rent",
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                    }
+                },
+                "required": ["timestamp","minCost","maxCost"]
+            }
+        },
+        "utilitiesCost": {
+            "description": "Cost of utilities for this unit type",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "timestamp": {
+                        "description": "Timestamp of recorded change in price: yyyy-mm-dd hh:mm:ss",
+                        "type": "string",
+                        "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]$"
+                    },
+                    "electricCost": {
+                        "description": "Cost of electric utility",
+                        "type": "number"
+                    },
+                    "waterCost": {
+                        "description": "Cost of water utility",
+                        "type": "number"
+                    },
+                    "gasCost": {
+                        "description": "Cost of gas utility",
+                        "type": "number"
+                    },
+                    "sewerCost": {
+                        "description": "Cost of sewer utility",
+                        "type": "number"
+                    },
+                    "internetCost": {
+                        "description": "Cost of internet utility",
+                        "type": "number"
+                    },
+                    "formula": {
+                        "description": "Formula to calculate how much is covered, displayed in a <Code/> Svelte component",
+                        "type": "string",
+                        "contentMediaType": "text/html"
+                    },
+                    "note": {
+                        "description": "Any notes about the utilities",
+                        "type": "string"
+                    }
+                },
+                "required": ["timestamp","electricCost","waterCost","gasCost","sewerCost","internetCost"]
+            }
+        }
+    },
+    "required": ["unitType","shared","bedrooms","bathrooms","floorplanFile","floorplanUrl","description","topAmenities","unitAmenities","rentCost","utilitiesCost"]
+}

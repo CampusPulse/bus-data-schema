@@ -1,0 +1,908 @@
+{
+    "$schema": "./apartmentComplex.schema.json",
+
+    "apartmentName": "Apex Apartments",
+    "address": "380 John Street, Rochester, NY 14623",
+    "onCampus": false,
+    "description": ["The largest student housing complex in upstate NY, Apex has lots of amenities to satisfy anyone, including a pool & hot tub, eSports Arena, VR Room, and outdoor patio area.","The largest student housing complex in upstate NY, Apex has lots of amenities to satisfy anyone, including a pool & hot tub, eSports Arena, VR Room, and outdoor patio area. Apex is comprised of two large buildings that each house hundreds of people, so fire alarms are common. Unfortunately, its very easy to set off a building-wide fire alarm, forcing everyone in the building to evacuate. The mailroom leaves much to be desired, as packages can take up to a week to be processed and available for pickup after delivery. The construction is cheap, and the bedrooms are small. One of the best things about Apex is the kitchens: they are large and feature good appliances."],
+    "email": "info@lifeatapex.com",
+    "phoneNumber": "(585)565-4600",
+    "website": "https://www.lifeatapex.com/",
+    "reletPolicy": "You are allowed to relet, but you must find a person to take over your lease.",
+    "subletPolicy": "You cannot sublet at Apex.",
+    "renewable": true,
+    "imageFile": "$lib/assets/apex.jpg",
+    "imageUrl": "https://www.passero.com/images/8auJXt.bc53/1300x520/APEX%20Exterior%203.jpg",
+    "avgRentCost": [
+        {
+            "maxCost": 965,
+            "minCost": 965,
+            "timestamp": "2023-06-19 20:40:34"
+        }
+    ],
+    "avgUtilitiesCost": [
+        {
+            "cost": 1,
+            "timestamp": "2023-06-19 20:44:45"
+        }
+    ],
+    "transit": {
+        "ritShuttle": {
+            "description": "Normal Apex-to-campus shuttle only stops at NTID and F lot. You can take the full campus loop shuttle that stops everywhere to get to S lot, but that could take anywhere from 20 minutes to an hour depending on the order of stops.",
+            "fLot": 5,
+            "sLot": 30,
+            "ntid": 3
+        },
+        "car": {
+            "description": "You cannot get a campus parking pass without a special exemption.",
+            "fLot": 5,
+            "sLot": 5,
+            "ntid": 3,
+            "gordonFieldHouse": 4
+        },
+        "biking": {
+            "description": "",
+            "fLot": 8,
+            "sLot": 8,
+            "ntid": 4,
+            "gordonFieldHouse": 6
+        },
+        "walking": {
+            "description": "",
+            "fLot": 25,
+            "sLot": 20,
+            "ntid": 10,
+            "gordonFieldHouse": 15
+        }
+    },
+    "topAmenities": [
+        {
+            "amenityName": "In-unit Kitchen",
+            "amenityDescription": "Each unit comes with a fully-featured kitchen",
+            "amenityIcon": "kitchen-set"
+        },
+        {
+            "amenityName": "In-unit Laundry room",
+            "amenityDescription": "Each unit has its own laundry room",
+            "amenityIcon": "jug-detergent"
+        },
+        {
+            "amenityName": "Accessible property",
+            "amenityDescription": "Each entrance is handicapped accessible, and there are ADA compliant rooms on the first floor. You can request fire alarm strobes for your room.",
+            "amenityIcon": "accessible-icon"
+        },
+        {
+            "amenityName": "eSports Arena",
+            "amenityDescription": "Apex has a fully decked-out esports arena, with gaming PCs and next-gen consoles.",
+            "amenityIcon": "gamepad"
+        }
+    ],
+    "apartmentAmenities": {
+        "accessibility": [
+            {
+                "accomodationName": "Handicapped Parking",
+                "accomodationDescription": "Apex has handicapped parking spots near each entrance, with extra wide spaces for vans.",
+                "accomodationIcon": "square-parking"
+            },
+            {
+                "accomodationName": "Handicapped Doors",
+                "accomodationDescription": "There are handicapped buttons for each entrance.",
+                "accomodationIcon": "door-open"
+            },
+            {
+                "accomodationName": "Elevators",
+                "accomodationDescription": "Apex has elevators all around the building, with accessible entrances and controls.",
+                "accomodationIcon": "elevator"
+            },
+            {
+                "accomodationName": "Wheelchair-accessible Units",
+                "accomodationDescription": "There are some wheelchair accessible units on the 1st floor.",
+                "accomodationIcon": "wheelchair"
+            },
+            {
+                "accomodationName": "Fire alarm strobes",
+                "accomodationDescription": "You can request fire alarm strobes be installed in your unit if necessary.",
+                "accomodationIcon": "fire"
+            }
+        ],
+        "amenities": [
+            {
+                "amenityName": "Gift cards for signing a lease",
+                "amenityDescription": "Apex often gives upwards of $800 gift cards for signing a lease with them. You get the money in a \"Community Rewards\" wallet a couple months after the start of your lease, and can apply it to different gift cards, such as Dave N Busters, Olive Garden, and many more vendors. You can also take it as a Visa e-gift card, to be used to purchase online items.",
+                "amenityIcon": "gift"
+            },
+            {
+                "amenityName": "eSports Arena",
+                "amenityDescription": "The eSports Arena at Apex includes multiple gaming PC stations, and PlayStation 5 & Xbox Series X consoles.",
+                "amenityIcon": "gamepad"
+            },
+            {
+                "amenityName": "Outdoor patio",
+                "amenityDescription": "The outdoor patio has firepits and grills, with hard plastic seats. There's a dog-walking area too.",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "VR Studio",
+                "amenityDescription": "There's a VR Room on the 4th floor of Building 1.",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "Electric Car Chargers",
+                "amenityDescription": "For a couple hundred extra dollars per lease, you can charge your electric car at the provided Level 2 chargers on-site.",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "Pool with Hot Tubs",
+                "amenityDescription": "There is a large pool with two hot tubs on the property. The hot tubs are open for most of the year, but the pool is only open for a few months during the summer and the beginning of the fall.",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "Computer Lab with Printer",
+                "amenityDescription": "There is a room on the 2nd floor with Macs and a printer. The printer is very finicky, and only the Apex staff can fix it or replace ink and paper.",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "Pet Friendly",
+                "amenityDescription": "Pets are welcome at Apex! They require a $250 non-refundable fee, plus a DNA sample to register your pet.",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "Pet Washing Station",
+                "amenityDescription": "There's a pet washing station available in Building 1! It has a large area to wash, groom, and clean your pet!",
+                "amenityIcon": ""
+            },
+            {
+                "amenityName": "24-Hour Gym",
+                "amenityDescription": "There's a 24 hour gym with a strengths, XR fitness, and yoga room in the clubhouse area of Building 1.",
+                "amenityIcon": ""
+            }
+        ]
+    },
+    "unitTypes": [
+        {
+            "unitType": "5x5",
+            "description": [""," "],
+            "floorplanFile": "$lib/assets/floorplan/apex_5x5.webp",
+            "floorplanUrl": "https://assets.myrazz.com/9c4992d0-60f5-4225-b237-55cd74969ee8/-/preview/400x400/-/format/auto/-/quality/lighter/-/resize/620x/",
+            "bathrooms": 5,
+            "bedrooms": 5,
+            "shared": false,
+            "rentCost": [
+                {
+                    "maxCost": 965,
+                    "minCost": 965,
+                    "timestamp": "2023-06-19 20:40:34"
+                }
+            ],
+            "utilitiesCost": [
+                {
+                    "note": "All utility bills are split evenly between roommates. $30 of gas and electric are covered per person in the unit ($150 total). They split it $20 electic, $10 gas. You get charged for any overages, split evenly between roommates. All other utilities are 100% covered.",
+                    "electricCost": 20,
+                    "gasCost": 10,
+                    "internetCost": 0,
+                    "sewerCost": 0,
+                    "waterCost": 0,
+                    "timestamp": "2023-06-19 20:44:45"
+                }
+            ],
+            "topAmenities": [
+                {
+                    "amenityName": "In-unit Kitchen",
+                    "amenityDescription": "Each unit comes with a fully-featured kitchen",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "In-unit Laundry",
+                    "amenityDescription": "Each unit has its own laundry room",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "Fully furnished",
+                    "amenityDescription": "Each unit comes with beds, desks, chairs, and couches. They also include a closet space, dresser, and nightstand.",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "High-speed Greenlight Internet",
+                    "amenityDescription": "You get 500mbps download, 50mbps upload speeds through Greenlight Networks. Greenlight offers 1gig speed upgrades for an extra cost.",
+                    "amenityIcon": ""
+                }
+            ],
+            "unitAmenities": {
+                "laundry": {
+                    "dryer": true,
+                    "washingMachine": true,
+                    "note": "The laundry machines are located in a closet."
+                },
+                "kitchen": {
+                    "range": true,
+                    "dishwasher": true,
+                    "garbageDisposal": true,
+                    "sink": true,
+                    "island": true,
+                    "microwave": true,
+                    "refrigerator": true
+                },
+                "furniture": {
+                    "bedroom": [
+                        {
+                            "amenityName": "Full-sized bed",
+                            "amenityDescription": "Each bedroom comes with a full-sized bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Desk",
+                            "amenityDescription": "Each bedroom comes with a desk, that includes overhead shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Chair",
+                            "amenityDescription": "Each bedroom comes with a hard wood chair.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Dresser",
+                            "amenityDescription": "Each bedroom comes with a split dresser that fits under the edge of the bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Nightstand",
+                            "amenityDescription": "Each bedroom comes with a nightstand that includes small drawers and shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Closet",
+                            "amenityDescription": "Each bedroom comes with a open closet space. It includes a shelf with clothes bar",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "bathroom": [
+                        {
+                            "amenityName": "Vanity",
+                            "amenityDescription": "Each bathroom comes with a vanity with a sink and mirror. While the mirror is flush mounted to the wall, the vanity has a small amount of storage space underneath.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Shower",
+                            "amenityDescription": "Each bathroom comes with a shower, that includes a tub base. Some first floor apartments are ADA-compliant with flat shower bases.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Toilet",
+                            "amenityDescription": "Each bathroom comes with a toilet.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Towel rack",
+                            "amenityDescription": "Each bathroom comes with a towel rack.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "GFCI outlet",
+                            "amenityDescription": "Each bathroom comes with a standard GFCI receptacle (two outlets).",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "commonArea": [
+                        {
+                            "amenityName": "Couch",
+                            "amenityDescription": "Each common area comes with two couchs. 5 total seats, split in a 2x3 configuration.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Coffee table",
+                            "amenityDescription": "Each common area comes with a coffee table.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "TV stand",
+                            "amenityDescription": "Each common area comes with a TV stand.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Kitchen Island Chairs",
+                            "amenityDescription": "Each common area comes with 5 chairs for the kitchen island.",
+                            "amenityIcon": ""
+                        }
+                    ]
+                },
+                "amenities": []
+            }
+        },
+        {
+            "unitType": "4x4",
+            "description": [""," "],
+            "floorplanFile": "$lib/assets/floorplan/apex_4x4.webp",
+            "floorplanUrl": "",
+            "bathrooms": 4,
+            "bedrooms": 4,
+            "shared": false,
+            "rentCost": [
+                {
+                    "maxCost": 999,
+                    "minCost": 999,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "utilitiesCost": [
+                {
+                    "note": "All utility bills are split evenly between roommates. $30 of gas and electric are covered per person in the unit ($120 total). They split it $20 electic, $10 gas. You get charged for any overages, split evenly between roommates. All other utilities are 100% covered.",
+                    "electricCost": 20,
+                    "gasCost": 10,
+                    "internetCost": 0,
+                    "sewerCost": 0,
+                    "waterCost": 0,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "topAmenities": [
+                {
+                    "amenityName": "In-unit Kitchen",
+                    "amenityDescription": "Each unit comes with a fully-featured kitchen",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "In-unit Laundry",
+                    "amenityDescription": "Each unit has its own laundry room",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "Fully furnished",
+                    "amenityDescription": "Each unit comes with beds, desks, chairs, and couches. They also include a closet space, dresser, and nightstand.",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "High-speed Greenlight Internet",
+                    "amenityDescription": "You get 500mbps download, 50mbps upload speeds through Greenlight Networks. Greenlight offers 1gig speed upgrades for an extra cost.",
+                    "amenityIcon": ""
+                }
+            ],
+            "unitAmenities": {
+                "laundry": {
+                    "dryer": true,
+                    "washingMachine": true,
+                    "note": "The laundry machines are located in a closet."
+                },
+                "kitchen": {
+                    "range": true,
+                    "dishwasher": true,
+                    "garbageDisposal": true,
+                    "sink": true,
+                    "island": true,
+                    "microwave": true,
+                    "refrigerator": true
+                },
+                "furniture": {
+                    "bedroom": [
+                        {
+                            "amenityName": "Full-sized bed",
+                            "amenityDescription": "Each bedroom comes with a full-sized bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Desk",
+                            "amenityDescription": "Each bedroom comes with a desk, that includes overhead shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Chair",
+                            "amenityDescription": "Each bedroom comes with a hard wood chair.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Dresser",
+                            "amenityDescription": "Each bedroom comes with a split dresser that fits under the edge of the bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Nightstand",
+                            "amenityDescription": "Each bedroom comes with a nightstand that includes small drawers and shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Closet",
+                            "amenityDescription": "Each bedroom comes with a open closet space. It includes a shelf with clothes bar",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "bathroom": [
+                        {
+                            "amenityName": "Vanity",
+                            "amenityDescription": "Each bathroom comes with a vanity with a sink and mirror. While the mirror is flush mounted to the wall, the vanity has a small amount of storage space underneath.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Shower",
+                            "amenityDescription": "Each bathroom comes with a shower, that includes a tub base. Some first floor apartments are ADA-compliant with flat shower bases.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Toilet",
+                            "amenityDescription": "Each bathroom comes with a toilet.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Towel rack",
+                            "amenityDescription": "Each bathroom comes with a towel rack.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "GFCI outlet",
+                            "amenityDescription": "Each bathroom comes with a standard GFCI receptacle (two outlets).",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "commonArea": [
+                        {
+                            "amenityName": "Couch",
+                            "amenityDescription": "Each common area comes with two couchs. 4 total seats, split in a 2x2 configuration.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Coffee table",
+                            "amenityDescription": "Each common area comes with a coffee table.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "TV stand",
+                            "amenityDescription": "Each common area comes with a TV stand.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Kitchen Island Chairs",
+                            "amenityDescription": "Each common area comes with 4 chairs for the kitchen island.",
+                            "amenityIcon": ""
+                        }
+                    ]
+                },
+                "amenities": []
+            }
+        },
+        {
+            "unitType": "2x2",
+            "description": [""," "],
+            "floorplanFile": "$lib/assets/floorplan/apex_2x2.webp",
+            "floorplanUrl": "",
+            "bathrooms": 2,
+            "bedrooms": 2,
+            "shared": false,
+            "rentCost": [
+                {
+                    "maxCost": 1199,
+                    "minCost": 1199,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "utilitiesCost": [
+                {
+                    "note": "All utility bills are split evenly between roommates. $30 of gas and electric are covered per person in the unit ($60 total). They split it $20 electic, $10 gas. You get charged for any overages, split evenly between roommates. All other utilities are 100% covered.",
+                    "electricCost": 20,
+                    "gasCost": 10,
+                    "internetCost": 0,
+                    "sewerCost": 0,
+                    "waterCost": 0,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "topAmenities": [
+                {
+                    "amenityName": "In-unit Kitchen",
+                    "amenityDescription": "Each unit comes with a fully-featured kitchen",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "In-unit Laundry",
+                    "amenityDescription": "Each unit has its own laundry room",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "Fully furnished",
+                    "amenityDescription": "Each unit comes with beds, desks, chairs, and couches. They also include a closet space, dresser, and nightstand.",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "High-speed Greenlight Internet",
+                    "amenityDescription": "You get 500mbps download, 50mbps upload speeds through Greenlight Networks. Greenlight offers 1gig speed upgrades for an extra cost.",
+                    "amenityIcon": ""
+                }
+            ],
+            "unitAmenities": {
+                "laundry": {
+                    "dryer": true,
+                    "washingMachine": true,
+                    "note": "The laundry machines are located in a closet."
+                },
+                "kitchen": {
+                    "range": true,
+                    "dishwasher": true,
+                    "garbageDisposal": true,
+                    "sink": true,
+                    "island": true,
+                    "microwave": true,
+                    "refrigerator": true
+                },
+                "furniture": {
+                    "bedroom": [
+                        {
+                            "amenityName": "Full-sized bed",
+                            "amenityDescription": "Each bedroom comes with a full-sized bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Desk",
+                            "amenityDescription": "Each bedroom comes with a desk, that includes overhead shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Chair",
+                            "amenityDescription": "Each bedroom comes with a hard wood chair.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Dresser",
+                            "amenityDescription": "Each bedroom comes with a split dresser that fits under the edge of the bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Nightstand",
+                            "amenityDescription": "Each bedroom comes with a nightstand that includes small drawers and shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Closet",
+                            "amenityDescription": "Each bedroom comes with a open closet space. It includes a shelf with clothes bar",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "bathroom": [
+                        {
+                            "amenityName": "Vanity",
+                            "amenityDescription": "Each bathroom comes with a vanity with a sink and mirror. While the mirror is flush mounted to the wall, the vanity has a small amount of storage space underneath.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Shower",
+                            "amenityDescription": "Each bathroom comes with a shower, that includes a tub base. Some first floor apartments are ADA-compliant with flat shower bases.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Toilet",
+                            "amenityDescription": "Each bathroom comes with a toilet.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Towel rack",
+                            "amenityDescription": "Each bathroom comes with a towel rack.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "GFCI outlet",
+                            "amenityDescription": "Each bathroom comes with a standard GFCI receptacle (two outlets).",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "commonArea": [
+                        {
+                            "amenityName": "Couch",
+                            "amenityDescription": "Each common area comes with a 2-seat couch.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Coffee table",
+                            "amenityDescription": "Each common area comes with a coffee table.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "TV stand",
+                            "amenityDescription": "Each common area comes with a TV stand.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Kitchen Island Chairs",
+                            "amenityDescription": "Each common area comes with 2 chairs for the kitchen island.",
+                            "amenityIcon": ""
+                        }
+                    ]
+                },
+                "amenities": []
+            }
+        },
+        {
+            "unitType": "1x1",
+            "description": [""," "],
+            "floorplanFile": "$lib/assets/floorplan/apex_1x1.webp",
+            "floorplanUrl": "",
+            "bathrooms": 1,
+            "bedrooms": 1,
+            "shared": false,
+            "rentCost": [
+                {
+                    "maxCost": 1499,
+                    "minCost": 1499,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "utilitiesCost": [
+                {
+                    "note": "All utility bills are split evenly between roommates. $30 of gas and electric are covered per person in the unit ($30 total). They split it $20 electic, $10 gas. You get charged for any overages, split evenly between roommates. All other utilities are 100% covered.",
+                    "electricCost": 20,
+                    "gasCost": 10,
+                    "internetCost": 0,
+                    "sewerCost": 0,
+                    "waterCost": 0,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "topAmenities": [
+                {
+                    "amenityName": "In-unit Kitchen",
+                    "amenityDescription": "Each unit comes with a fully-featured kitchen",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "In-unit Laundry",
+                    "amenityDescription": "Each unit has its own laundry room",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "Fully furnished",
+                    "amenityDescription": "Each unit comes with beds, desks, chairs, and couches. They also include a closet space, dresser, and nightstand.",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "High-speed Greenlight Internet",
+                    "amenityDescription": "You get 500mbps download, 50mbps upload speeds through Greenlight Networks. Greenlight offers 1gig speed upgrades for an extra cost.",
+                    "amenityIcon": ""
+                }
+            ],
+            "unitAmenities": {
+                "laundry": {
+                    "dryer": true,
+                    "washingMachine": true,
+                    "note": "The laundry machines are located in a closet."
+                },
+                "kitchen": {
+                    "range": true,
+                    "dishwasher": true,
+                    "garbageDisposal": true,
+                    "sink": true,
+                    "island": true,
+                    "microwave": true,
+                    "refrigerator": true
+                },
+                "furniture": {
+                    "bedroom": [
+                        {
+                            "amenityName": "Full-sized bed",
+                            "amenityDescription": "Each bedroom comes with a full-sized bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Desk",
+                            "amenityDescription": "Each bedroom comes with a desk, that includes overhead shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Chair",
+                            "amenityDescription": "Each bedroom comes with a hard wood chair.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Dresser",
+                            "amenityDescription": "Each bedroom comes with a split dresser that fits under the edge of the bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Nightstand",
+                            "amenityDescription": "Each bedroom comes with a nightstand that includes small drawers and shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Closet",
+                            "amenityDescription": "Each bedroom comes with a open closet space. It includes a shelf with clothes bar",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "bathroom": [
+                        {
+                            "amenityName": "Vanity",
+                            "amenityDescription": "Each bathroom comes with a vanity with a sink and mirror. While the mirror is flush mounted to the wall, the vanity has a small amount of storage space underneath.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Shower",
+                            "amenityDescription": "Each bathroom comes with a shower, that includes a tub base. Some first floor apartments are ADA-compliant with flat shower bases.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Toilet",
+                            "amenityDescription": "Each bathroom comes with a toilet.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Towel rack",
+                            "amenityDescription": "Each bathroom comes with a towel rack.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "GFCI outlet",
+                            "amenityDescription": "Each bathroom comes with a standard GFCI receptacle (two outlets).",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "commonArea": [
+                        {
+                            "amenityName": "Couch",
+                            "amenityDescription": "Each common area comes with a couch.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Coffee table",
+                            "amenityDescription": "Each common area comes with a coffee table.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "TV stand",
+                            "amenityDescription": "Each common area comes with a TV stand.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Kitchen Island Chair",
+                            "amenityDescription": "Each common area comes with a chair for the kitchen island.",
+                            "amenityIcon": ""
+                        }
+                    ]
+                },
+                "amenities": []
+            }
+        },
+        {
+            "unitType": "Studio",
+            "description": [""," "],
+            "floorplanFile": "$lib/assets/floorplan/apex_studio.webp",
+            "floorplanUrl": "",
+            "bathrooms": 1,
+            "bedrooms": 1,
+            "shared": false,
+            "rentCost": [
+                {
+                    "maxCost": 1799,
+                    "minCost": 1799,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "utilitiesCost": [
+                {
+                    "note": "All utility bills are split evenly between roommates. $30 of gas and electric are covered per person in the unit ($30 total). They split it $20 electic, $10 gas. You get charged for any overages, split evenly between roommates. All other utilities are 100% covered.",
+                    "electricCost": 20,
+                    "gasCost": 10,
+                    "internetCost": 0,
+                    "sewerCost": 0,
+                    "waterCost": 0,
+                    "timestamp": "2023-06-20 21:19:34"
+                }
+            ],
+            "topAmenities": [
+                {
+                    "amenityName": "In-unit Kitchen",
+                    "amenityDescription": "Each unit comes with a fully-featured kitchen",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "In-unit Laundry",
+                    "amenityDescription": "Each unit has its own laundry room",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "Fully furnished",
+                    "amenityDescription": "Each unit comes with beds, desks, chairs, and couches. They also include a closet space, dresser, and nightstand.",
+                    "amenityIcon": ""
+                },
+                {
+                    "amenityName": "High-speed Greenlight Internet",
+                    "amenityDescription": "You get 500mbps download, 50mbps upload speeds through Greenlight Networks. Greenlight offers 1gig speed upgrades for an extra cost.",
+                    "amenityIcon": ""
+                }
+            ],
+            "unitAmenities": {
+                "laundry": {
+                    "dryer": true,
+                    "washingMachine": true,
+                    "note": "The laundry machines are located in a closet."
+                },
+                "kitchen": {
+                    "range": true,
+                    "dishwasher": true,
+                    "garbageDisposal": true,
+                    "sink": true,
+                    "island": true,
+                    "microwave": true,
+                    "refrigerator": true
+                },
+                "furniture": {
+                    "bedroom": [
+                        {
+                            "amenityName": "Full-sized bed",
+                            "amenityDescription": "Each bedroom comes with a full-sized bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Desk",
+                            "amenityDescription": "Each bedroom comes with a desk, that includes overhead shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Chair",
+                            "amenityDescription": "Each bedroom comes with a hard wood chair.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Dresser",
+                            "amenityDescription": "Each bedroom comes with a split dresser that fits under the edge of the bed.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Nightstand",
+                            "amenityDescription": "Each bedroom comes with a nightstand that includes small drawers and shelves.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Closet",
+                            "amenityDescription": "Each bedroom comes with a open closet space. It includes a shelf with clothes bar",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "bathroom": [
+                        {
+                            "amenityName": "Vanity",
+                            "amenityDescription": "Each bathroom comes with a vanity with a sink and mirror. While the mirror is flush mounted to the wall, the vanity has a small amount of storage space underneath.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Shower",
+                            "amenityDescription": "Each bathroom comes with a shower, that includes a tub base. Some first floor apartments are ADA-compliant with flat shower bases.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Toilet",
+                            "amenityDescription": "Each bathroom comes with a toilet.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Towel rack",
+                            "amenityDescription": "Each bathroom comes with a towel rack.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "GFCI outlet",
+                            "amenityDescription": "Each bathroom comes with a standard GFCI receptacle (two outlets).",
+                            "amenityIcon": ""
+                        }
+                    ],
+                    "commonArea": [
+                        {
+                            "amenityName": "Couch",
+                            "amenityDescription": "Each common area comes with a couch.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Coffee table",
+                            "amenityDescription": "Each common area comes with a coffee table.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "TV stand",
+                            "amenityDescription": "Each common area comes with a TV stand.",
+                            "amenityIcon": ""
+                        },
+                        {
+                            "amenityName": "Kitchen Island Chair",
+                            "amenityDescription": "Each common area comes with a chair for the kitchen island.",
+                            "amenityIcon": ""
+                        }
+                    ]
+                },
+                "amenities": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,336 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://rithousing.com/apartmentComplex.schema.json",
+    "title": "Apartment Complex data for RIT Housing Comparison Website",
+    "description": "All the data for every apartment complex and unit type used in this website.",
+    "type": "object",
+    "properties": {
+        "apartmentName": {
+            "description": "The name of the apartment complex",
+            "type": "string"
+        },
+        "address": {
+            "description": "Address of the apartment complex",
+            "type": "string",
+            "pattern": "^(\\d{1,}) [a-zA-Z0-9\\s]+(\\,)? [a-zA-Z]+(\\,)? [A-Z]{2} [0-9]{5,6}$"
+        },
+        "onCampus": {
+            "description": "Is the apartment on campus?",
+            "type": "boolean"
+        },
+        "avgRentCost": {
+            "description": "Average cost of rent between each unit type",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "timestamp": {
+                        "description": "Timestamp of recorded change in price: yyyy-mm-dd hh:mm:ss",
+                        "type": "string",
+                        "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]$"
+                    },
+                    "minCost": {
+                        "description": "Minimum average cost of rent",
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                    },
+                    "maxCost": {
+                        "description": "Maximum average cost of rent",
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                    }
+                },
+                "required": ["timestamp","minCost","maxCost"]
+            }
+        },
+        "avgUtilitiesCost": {
+            "description": "Average cost of utilities between each unit type",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "timestamp": {
+                        "description": "Timestamp of recorded change in price: yyyy-mm-dd hh:mm:ss",
+                        "type": "string",
+                        "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]$"
+                    },
+                    "cost": {
+                        "description": "Average cost of utilities",
+                        "type": "number"
+                    }
+                },
+                "required": ["timestamp","cost"]
+            }
+        },
+        "renewable": {
+            "description": "Describing if the apartment is renewable",
+            "type": "boolean"
+        },
+        "subletPolicy": {
+            "description": "Describe the sublet policy of the apartment",
+            "type": "string"
+        },
+        "reletPolicy": {
+            "description": "Describe the relet policy of the apartment",
+            "type": "string"
+        },
+        "imageFile": {
+            "description": "Path to image file on disk",
+            "type": "string"
+        },
+        "imageUrl": {
+            "description": "Url link to image file from apartment website",
+            "type": "string"
+        },
+        "description": {
+            "description": "Description of the apartment complex. Index 0 is short, Index 1 is long",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 2,
+            "maxItems": 2,
+            "uniqueItems": true
+        },
+        "topAmenities": {
+            "description": "The 4 top amenities at this apartment",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "amenityName": {
+                        "description": "name of the amenity",
+                        "type": "string"
+                    },
+                    "amenityDescription": {
+                        "description": "Description of the amenity",
+                        "type": "string"
+                    },
+                    "amenityIcon": {
+                        "description": "  icon for the amenity",
+                        "type": "string"
+                    }
+                },
+                "required": ["amenityName","amenityDescription", "amenityIcon"]
+            },
+            "minItems": 4,
+            "maxItems": 4
+        },
+        "phoneNumber": {
+            "description": "Phone number of the apartment",
+            "type": "string",
+            "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+        },
+        "email": {
+            "description": "Email address for the apartment",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+        },
+        "website": {
+            "description": "Website for the apartment",
+            "type": "string"
+        },
+        "apartmentAmenities": {
+            "description": "All amentities for the apartment (not units)",
+            "type": "object",
+            "properties": {
+                "accessibility": {
+                    "description": "Accessibility accomodations",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "accomodationName": {
+                                "description": "name of the accessibility accomodation",
+                                "type": "string"
+                            },
+                            "accomodationDescription": {
+                                "description": "Description of the accomodation",
+                                "type": "string"
+                            },
+                            "accomodationIcon": {
+                                "description": "  icon for the accessibility accomodation",
+                                "type": "string"
+                            }
+                        },
+                        "required": ["accomodationName","accomodationDescription", "accomodationIcon"]
+                    }
+                },
+                "amenities": {
+                    "description": "All amenities for the apartment (not units)",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "amenityName": {
+                                "description": "name of the amenity",
+                                "type": "string"
+                            },
+                            "amenityDescription": {
+                                "description": "Description of the amenity",
+                                "type": "string"
+                            },
+                            "amenityIcon": {
+                                "description": "  icon for the amenity",
+                                "type": "string"
+                            }
+                        },
+                        "required": ["amenityName","amenityDescription", "amenityIcon"]
+                    }
+                }
+            },
+            "required": ["amenities"]
+        },
+        "transit": {
+            "description": "Transit times using common transportation to popular locations on campus",
+            "type": "object",
+            "properties": {
+                "ritShuttle": {
+                    "description": "RIT Shuttle times",
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "Any notes about this transit option",
+                            "type": "string"
+                        },
+                        "fLot": {
+                            "description": "Time to F Lot in minutes",
+                            "type": "integer"
+                        },
+                        "sLot": {
+                            "description": "Time to S Lot in minutes",
+                            "type": "integer"
+                        },
+                        "NTID": {
+                            "description": "Time to NTID in minutes",
+                            "type": "integer"
+                        },
+                        "gordonFieldHouse": {
+                            "description": "Time to Gordon Field House in minutes",
+                            "type": "integer"
+                        }
+                    },
+                    "required": ["description","fLot"]
+                },
+                "privateShuttle": {
+                    "description": "Private Shuttle times",
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "Any notes about this transit option",
+                            "type": "string"
+                        },
+                        "fLot": {
+                            "description": "Time to F Lot in minutes",
+                            "type": "integer"
+                        },
+                        "sLot": {
+                            "description": "Time to S Lot in minutes",
+                            "type": "integer"
+                        },
+                        "ntid": {
+                            "description": "Time to ntid in minutes",
+                            "type": "integer"
+                        },
+                        "gordonFieldHouse": {
+                            "description": "Time to Gordon Field House in minutes",
+                            "type": "integer"
+                        }
+                    },
+                    "required": ["description","fLot","sLot","ntid","gordonFieldHouse"]
+                },
+                "car": {
+                    "description": "Personal car times",
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "Any notes about this transit option",
+                            "type": "string"
+                        },
+                        "fLot": {
+                            "description": "Time to F Lot in minutes",
+                            "type": "integer"
+                        },
+                        "sLot": {
+                            "description": "Time to S Lot in minutes",
+                            "type": "integer"
+                        },
+                        "ntid": {
+                            "description": "Time to ntid in minutes",
+                            "type": "integer"
+                        },
+                        "gordonFieldHouse": {
+                            "description": "Time to Gordon Field House in minutes",
+                            "type": "integer"
+                        }
+                    },
+                    "required": ["description","fLot","sLot","ntid","gordonFieldHouse"]
+                },
+                "biking": {
+                    "description": "Biking times",
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "Any notes about this transit option",
+                            "type": "string"
+                        },
+                        "fLot": {
+                            "description": "Time to F Lot in minutes",
+                            "type": "integer"
+                        },
+                        "sLot": {
+                            "description": "Time to S Lot in minutes",
+                            "type": "integer"
+                        },
+                        "ntid": {
+                            "description": "Time to ntid in minutes",
+                            "type": "integer"
+                        },
+                        "gordonFieldHouse": {
+                            "description": "Time to Gordon Field House in minutes",
+                            "type": "integer"
+                        }
+                    },
+                    "required": ["description","fLot","sLot","ntid","gordonFieldHouse"]
+                },
+                "walking": {
+                    "description": "Walking times",
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "description": "Any notes about this transit option",
+                            "type": "string"
+                        },
+                        "fLot": {
+                            "description": "Time to F Lot in minutes",
+                            "type": "integer"
+                        },
+                        "sLot": {
+                            "description": "Time to S Lot in minutes",
+                            "type": "integer"
+                        },
+                        "ntid": {
+                            "description": "Time to ntid in minutes",
+                            "type": "integer"
+                        },
+                        "gordonFieldHouse": {
+                            "description": "Time to Gordon Field House in minutes",
+                            "type": "integer"
+                        }
+                    },
+                    "required": ["description","fLot","sLot","ntid","gordonFieldHouse"]
+                }
+            },
+            "required": []
+        },
+        "unitTypes": {
+            "description": "Unit types in this apartment complex",
+            "type": "array",
+            "items": {
+                "$ref": "./unitType.schema.json"
+            }
+        }
+    },
+    "required": ["apartmentName","address","onCampus","avgRentCost","avgUtilitiesCost","renewable","imageFile","imageUrl",
+        "description","topAmenities","phoneNumber","email","website","apartmentAmenities","transit"]
+}
