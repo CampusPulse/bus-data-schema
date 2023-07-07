@@ -2,7 +2,7 @@ import os
 
 from setuptools import setup
 
-VERSION = "1.2.5"
+VERSION = "0.1.0"
 
 
 def get_long_description():
@@ -18,7 +18,7 @@ setup(
     description="Normalized data schema for the output of the data-ingest pipeline.",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
-    author="Vaccinate The States",
+    author="Adrian Edwards",
     url="https://github.com/rit-hc-website/rit-housing-data-schema",
     project_urls={
         "Issues": "https://github.com/rit-hc-website/rit-housing-data-schema/issues",
