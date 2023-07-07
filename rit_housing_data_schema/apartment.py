@@ -7,7 +7,7 @@ https://github.com/rit-hc-website/data-ingest/wiki/Normalized-Location-Schema
 import datetime
 import enum
 import re
-from typing import List, Optional, Union
+from typing import List, Optional
 
 from pydantic import (
     AnyUrl,
@@ -209,7 +209,7 @@ class Contact(BaseModel):
     email: Optional[EmailStr]
     other: Optional[str] = Field(max_length=NOTE_MAX_LENGTH)
 
-    @root_validator
+    @root_validator(skip_on_failure=True)
     @classmethod
     def validate_has_one_value(cls, values: dict) -> dict:
         oneof_fields = ["phone", "website", "email", "other"]
@@ -238,7 +238,7 @@ class OpenDate(BaseModel):
     opens: Optional[StringDate]
     closes: Optional[StringDate]
 
-    @root_validator
+    @root_validator(skip_on_failure=True)
     @classmethod
     def validate_closes_after_opens(cls, values: dict) -> dict:
         opens = values.get("opens")
@@ -264,7 +264,7 @@ class OpenHour(BaseModel):
     opens: StringTime
     closes: StringTime
 
-    @root_validator
+    @root_validator(skip_on_failure=True)
     @classmethod
     def validate_closes_after_opens(cls, values: dict) -> dict:
         opens = values.get("opens")
@@ -363,7 +363,7 @@ class RentCost(BaseModel):
     minCost: Optional[int]
     maxCost: Optional[int]
 
-    @root_validator
+    @root_validator(skip_on_failure=True)
     @classmethod
     def validate_max_greaterthan_min(cls, values: dict) -> dict:
         low = values.get("minCost")
@@ -474,7 +474,7 @@ class NormalizedApartmentComplex(BaseModel):
     unitTypes: Optional[List[UnitType]]
     source: Source
 
-    @root_validator
+    @root_validator(skip_on_failure=True)
     @classmethod
     def validate_id_source(cls, values: dict) -> dict:
         loc_id = values.get("id")

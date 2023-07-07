@@ -28,7 +28,7 @@ setup(
     license="MIT",
     version=VERSION,
     packages=["rit_housing_data_schema"],
-    install_requires=["pydantic[email]"],
+    install_requires=["pydantic[email]~=1.10"],
     extras_require={"test": ["pytest"], "lint": ["flake8", "black", "mypy", "isort"]},
     tests_require=["rit-housing-data-schema[test]"],
     python_requires=">=3.8",

@@ -19,9 +19,10 @@ def test_has_expected_schema():
         "Availability",
         "UnitType",
         "Access",
-        "Organization",
         "Appliances",
         "Source",
+        "RentCost",
+        "UtilityCosts",
         "NormalizedApartmentComplex",
     }
 
@@ -134,10 +135,10 @@ def test_raises_on_invalid_contact():
 
 def test_raises_on_invalid_location():
     with pytest.raises(pydantic.error_wrappers.ValidationError):
-        apartment.NormalizedLocation()
+        apartment.NormalizedApartmentComplex()
 
     with pytest.raises(pydantic.error_wrappers.ValidationError):
-        apartment.NormalizedLocation(
+        apartment.NormalizedApartmentComplex(
             id="source:id",
             contact=apartment.Contact(phone="444-444"),
             source=apartment.Source(
@@ -148,7 +149,7 @@ def test_raises_on_invalid_location():
         )
 
     with pytest.raises(pydantic.error_wrappers.ValidationError):
-        apartment.NormalizedLocation(
+        apartment.NormalizedApartmentComplex(
             id="invalid:id",
             source=apartment.Source(
                 source="source",
@@ -158,7 +159,7 @@ def test_raises_on_invalid_location():
         )
 
     with pytest.raises(pydantic.error_wrappers.ValidationError):
-        apartment.NormalizedLocation(
+        apartment.NormalizedApartmentComplex(
             id="source:" + "a" * 200,
             source=apartment.Source(
                 source="source",
@@ -170,7 +171,7 @@ def test_raises_on_invalid_location():
 
 def test_valid_location():
     # Minimal record
-    assert apartment.NormalizedLocation(
+    assert apartment.NormalizedApartmentComplex(
         id="source:id",
         source=apartment.Source(
             source="source",
@@ -180,7 +181,7 @@ def test_valid_location():
     )
 
     # Full record with str enums
-    full_loc = apartment.NormalizedLocation(
+    full_loc = apartment.NormalizedApartmentComplex(
         id="source:id",
         name="name",
         address=apartment.Address(
@@ -196,7 +197,6 @@ def test_valid_location():
                 phone="(916) 445-2841",
             )
         ],
-        languages=["en"],
         opening_dates=[
             apartment.OpenDate(
                 opens="2021-04-01",
@@ -220,9 +220,8 @@ def test_valid_location():
             wheelchair="partial",
         ),
         links=[
-            "www.google.com"
+            "https://www.google.com"
         ],
-        notes="note",
         active=True,
         source=apartment.Source(
             source="source",
@@ -304,7 +303,7 @@ def test_valid_location():
 
     assert full_loc_json_dumps == full_loc_json
 
-    parsed_full_loc = apartment.Normalizedapartment.parse_raw(full_loc_json_dumps)
+    parsed_full_loc = apartment.NormalizedApartmentComplex.parse_raw(full_loc_json_dumps)
     assert parsed_full_loc
 
     assert parsed_full_loc == full_loc
