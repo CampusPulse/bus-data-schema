@@ -20,7 +20,7 @@ Import this package then use it to construct normalized objects with type
 enforcement.
 
 ```python
-from vaccine_feed_ingest_schema import location
+from rit_housing_data_schema import location
 
 
 location.NormalizedLocation(
@@ -72,7 +72,7 @@ To run linters:
 
 ```sh
 mypy .
-flake8 vaccine_feed_ingest_schema
+flake8 rit_housing_data_schema
 ```
 
 To run the tests:

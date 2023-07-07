@@ -27,7 +27,7 @@ setup(
     },
     license="MIT",
     version=VERSION,
-    packages=["vaccine_feed_ingest_schema"],
+    packages=["rit_housing_data_schema"],
     install_requires=["pydantic[email]"],
     extras_require={"test": ["pytest"], "lint": ["flake8", "black", "mypy", "isort"]},
     tests_require=["rit-housing-data-schema[test]"],

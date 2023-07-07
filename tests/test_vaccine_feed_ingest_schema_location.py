@@ -3,7 +3,7 @@ import json
 
 import pydantic.error_wrappers
 import pytest
-from vaccine_feed_ingest_schema import location
+from rit_housing_data_schema import location
 
 from .common import collect_existing_subclasses
 

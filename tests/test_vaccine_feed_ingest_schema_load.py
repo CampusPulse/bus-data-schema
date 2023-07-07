@@ -1,5 +1,5 @@
 import pydantic
-from vaccine_feed_ingest_schema import load
+from rit_housing_data_schema import load
 
 from .common import collect_existing_subclasses
 

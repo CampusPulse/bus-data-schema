@@ -5,12 +5,12 @@ import pytest
 
 from .common import collect_existing_subclasses
 
-DEPRECATION_SNIPPET = "vaccine_feed_ingest_schema.schema is deprecated."
+DEPRECATION_SNIPPET = "rit_housing_data_schema.schema is deprecated."
 
 
 def test_warn_on_import():
     with pytest.warns(DeprecationWarning, match=DEPRECATION_SNIPPET):
-        from vaccine_feed_ingest_schema import schema
+        from rit_housing_data_schema import schema
 
         # Depending on the order in which tests run, the above import may be
         # skipped. Reload it so that we trigger the warning, if it exists.
@@ -19,7 +19,7 @@ def test_warn_on_import():
 
 @pytest.mark.filterwarnings(f"ignore: {DEPRECATION_SNIPPET}")
 def test_has_expected_classes():
-    from vaccine_feed_ingest_schema import schema
+    from rit_housing_data_schema import schema
 
     expected = {
         "Address",
@@ -49,7 +49,7 @@ def test_has_expected_classes():
 
 @pytest.mark.filterwarnings(f"ignore: {DEPRECATION_SNIPPET}")
 def test_raises_on_invalid_location():
-    from vaccine_feed_ingest_schema import schema
+    from rit_housing_data_schema import schema
 
     with pytest.raises(pydantic.error_wrappers.ValidationError):
         schema.NormalizedLocation()

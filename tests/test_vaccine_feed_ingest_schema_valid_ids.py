@@ -1,6 +1,6 @@
 import pydantic
 import pytest
-from vaccine_feed_ingest_schema import location
+from rit_housing_data_schema import location
 
 VALID_AUTHORITIES = [
     "wa_argcis",

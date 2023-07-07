@@ -20,18 +20,18 @@ from .location import (  # noqa: F401
 
 """
 DEPRECATION NOTICE
-vaccine_feed_ingest_schema/schema.py is DEPRECATED. Instead of using this file,
+rit_housing_data_schema/schema.py is DEPRECATED. Instead of using this file,
 import the file that you care about:
 
-from vaccine_feed_ingest_schema import location
+from rit_housing_data_schema import location
 ~or~
-from vaccine_feed_ingest_schema import load
+from rit_housing_data_schema import load
 
 This may be removed in a future major version bump.
 """
 warnings.warn(
-    "vaccine_feed_ingest_schema.schema is deprecated. "
-    + "Use vaccine_feed_ingest_schema.location or vaccine_feed_ingest_schema.load instead",
+    "rit_housing_data_schema.schema is deprecated. "
+    + "Use rit_housing_data_schema.location or rit_housing_data_schema.load instead",
     DeprecationWarning,
     stacklevel=2,
 )
