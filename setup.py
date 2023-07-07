@@ -14,22 +14,22 @@ def get_long_description():
 
 
 setup(
-    name="vaccine-feed-ingest-schema",
-    description="Normalized data schema for the output of the vaccine-feed-ingest pipeline.",
+    name="rit-housing-data-schema",
+    description="Normalized data schema for the output of the data-ingest pipeline.",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     author="Vaccinate The States",
-    url="https://github.com/CAVaccineInventory/vaccine-feed-ingest-schema",
+    url="https://github.com/rit-hc-website/rit-housing-data-schema",
     project_urls={
-        "Issues": "https://github.com/CAVaccineInventory/vaccine-feed-ingest-schema/issues",
-        "CI": "https://github.com/CAVaccineInventory/vaccine-feed-ingest-schema/actions",
-        "Changelog": "https://github.com/CAVaccineInventory/vaccine-feed-ingest-schema/releases",
+        "Issues": "https://github.com/rit-hc-website/rit-housing-data-schema/issues",
+        "CI": "https://github.com/rit-hc-website/rit-housing-data-schema/actions",
+        "Changelog": "https://github.com/rit-hc-website/rit-housing-data-schema/releases",
     },
     license="MIT",
     version=VERSION,
     packages=["vaccine_feed_ingest_schema"],
     install_requires=["pydantic[email]"],
     extras_require={"test": ["pytest"], "lint": ["flake8", "black", "mypy", "isort"]},
-    tests_require=["vaccine-feed-ingest-schema[test]"],
+    tests_require=["rit-housing-data-schema[test]"],
     python_requires=">=3.8",
 )

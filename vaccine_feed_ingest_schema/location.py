@@ -1,7 +1,7 @@
 """Normalized Location Schema
 
 Spec defined here:
-https://github.com/CAVaccineInventory/vaccine-feed-ingest/wiki/Normalized-Location-Schema
+https://github.com/rit-hc-website/data-ingest/wiki/Normalized-Location-Schema
 """
 
 import datetime

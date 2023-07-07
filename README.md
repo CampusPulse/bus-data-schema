@@ -1,17 +1,17 @@
-# vaccine-feed-ingest-schema
+# rit-housing-data-schema
 
-[![PyPI](https://img.shields.io/pypi/v/vaccine-feed-ingest-schema.svg)](https://pypi.org/project/vaccine-feed-ingest-schema/)
-[![Changelog](https://img.shields.io/github/v/release/CAVaccineInventory/vaccine-feed-ingest-schema?include_prereleases&label=changelog)](https://github.com/CAVaccineInventory/vaccine-feed-ingest-schema/releases)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CAVaccineInventory/vaccine-feed-ingest-schema/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/rit-housing-data-schema.svg)](https://pypi.org/project/rit-housing-data-schema/)
+[![Changelog](https://img.shields.io/github/v/release/rit-hc-website/rit-housing-data-schema?include_prereleases&label=changelog)](https://github.com/rit-hc-website/rit-housing-data-schema/releases)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rit-hc-website/rit-housing-data-schema/blob/main/LICENSE)
 
-Normalized data schema for the output of the vaccine-feed-ingest pipeline.
+Normalized data schema for the output of the data-ingest pipeline.
 
 ## Installation
 
 Install this library using `pip`:
 
 ```sh
-pip install vaccine-feed-ingest-schema
+pip install rit-housing-data-schema
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ location.NormalizedLocation(
 ```
 
 For more details on the schema, read the inline comments or the
-[`vaccine-feed-ingest` wiki](https://github.com/CAVaccineInventory/vaccine-feed-ingest/wiki/Normalized-Location-Schema).
+[`data-ingest` wiki](https://github.com/rit-hc-website/data-ingest/wiki/Normalized-Location-Schema).
 
 ## Development
 
@@ -44,7 +44,7 @@ To contribute to this library, first checkout the code. Then create a new
 virtual environment:
 
 ```sh
-cd vaccine-feed-ingest-schema
+cd rit-housing-data-schema
 python -mvenv venv
 source venv/bin/activate
 ```
