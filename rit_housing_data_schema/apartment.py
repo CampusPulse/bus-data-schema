@@ -9,14 +9,7 @@ import enum
 import re
 from typing import List, Optional
 
-from pydantic import (
-    AnyUrl,
-    EmailStr,
-    Field,
-    HttpUrl,
-    datetime_parse,
-    root_validator,
-)
+from pydantic import AnyUrl, EmailStr, Field, HttpUrl, datetime_parse, root_validator
 
 from .common import BaseModel
 
@@ -322,6 +315,7 @@ class Source(BaseModel):
     published_at: Optional[StringDatetime]
     data: dict
 
+
 # TODO: accessibility accomodations as amenities
 # "accomodationName": {
 #     "description": "name of the accessibility accomodation",
@@ -359,6 +353,7 @@ class RentCost(BaseModel):
         "maxCost": int, Maximum average cost of rent in cents per month,
     }
     """
+
     notes: Optional[str]
     minCost: Optional[int]
     maxCost: Optional[int]
@@ -371,7 +366,9 @@ class RentCost(BaseModel):
 
         if low and high:
             if high < low:
-                raise ValueError("Minimum rent cost must be less than maximum rent cost")
+                raise ValueError(
+                    "Minimum rent cost must be less than maximum rent cost"
+                )
 
         return values
 
@@ -386,6 +383,7 @@ class UtilityCosts(BaseModel):
         "internet": int cost of internet service in cents per month
     }
     """
+
     electric: Optional[int]
     water: Optional[int]
     gas: Optional[int]
@@ -407,9 +405,9 @@ class Appliances(BaseModel):
     }
     """
 
-# sink
-# garbageDisposal
-# island
+    # sink
+    # garbageDisposal
+    # island
 
     washingMachine: Optional[bool]
     dryer: Optional[bool]

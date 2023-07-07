@@ -3,6 +3,7 @@ import json
 
 import pydantic.error_wrappers
 import pytest
+
 from rit_housing_data_schema import apartment
 
 from .common import collect_existing_subclasses
@@ -219,9 +220,7 @@ def test_valid_location():
             drive=False,
             wheelchair="partial",
         ),
-        links=[
-            "https://www.google.com"
-        ],
+        links=["https://www.google.com"],
         active=True,
         source=apartment.Source(
             source="source",
@@ -237,45 +236,37 @@ def test_valid_location():
         subletPolicy="no",
         reletPolicy="no",
         imageUrl="https://4.bp.blogspot.com/-2llfvEbN9O8/T8zrEtTLkCI/AAAAAAAAMyc/zP4uPLwaQss/s1600/these-funny-cats-001-031.jpg",
-        amenities=[apartment.Amenity(
-            name="warm",
-            description="it doesnt freeze"
-        )],
-        unitTypes=[apartment.UnitType(
-            name="1bed",
-            description="1 bedroom apt",
-            id="01-01",
-            shared=False,
-            bedroomCount=1,
-            bathroomCount=1,
-            floorplanUrl="https://4.bp.blogspot.com/-2llfvEbN9O8/T8zrEtTLkCI/AAAAAAAAMyc/zP4uPLwaQss/s1600/these-funny-cats-001-031.jpg",
-            rent=apartment.RentCost(
-                minCost=899,
-                maxCost=999,
-                notes="pay us"
-            ),
-            appliances=apartment.Appliances(
-                washingMachine=False,
-                dryer=False,
-                oven=False,
-                stove=False,
-                ovenAsRange=False,
-                dishwasher=False,
-                refrigerator=False,
-                microwave=False,
-            ),
-            amenities=[apartment.Amenity(
-                name="AC",
-                description="it barely works"
-            )],
-            utilitiesCost=apartment.UtilityCosts(
-                electric=90,
-                water=90,
-                gas=90,
-                sewer=90,
-                internet=90,
-            ),
-        )],
+        amenities=[apartment.Amenity(name="warm", description="it doesnt freeze")],
+        unitTypes=[
+            apartment.UnitType(
+                name="1bed",
+                description="1 bedroom apt",
+                id="01-01",
+                shared=False,
+                bedroomCount=1,
+                bathroomCount=1,
+                floorplanUrl="https://4.bp.blogspot.com/-2llfvEbN9O8/T8zrEtTLkCI/AAAAAAAAMyc/zP4uPLwaQss/s1600/these-funny-cats-001-031.jpg",
+                rent=apartment.RentCost(minCost=899, maxCost=999, notes="pay us"),
+                appliances=apartment.Appliances(
+                    washingMachine=False,
+                    dryer=False,
+                    oven=False,
+                    stove=False,
+                    ovenAsRange=False,
+                    dishwasher=False,
+                    refrigerator=False,
+                    microwave=False,
+                ),
+                amenities=[apartment.Amenity(name="AC", description="it barely works")],
+                utilitiesCost=apartment.UtilityCosts(
+                    electric=90,
+                    water=90,
+                    gas=90,
+                    sewer=90,
+                    internet=90,
+                ),
+            )
+        ],
     )
     assert full_loc
 
@@ -303,7 +294,9 @@ def test_valid_location():
 
     assert full_loc_json_dumps == full_loc_json
 
-    parsed_full_loc = apartment.NormalizedApartmentComplex.parse_raw(full_loc_json_dumps)
+    parsed_full_loc = apartment.NormalizedApartmentComplex.parse_raw(
+        full_loc_json_dumps
+    )
     assert parsed_full_loc
 
     assert parsed_full_loc == full_loc
