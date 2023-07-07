@@ -80,3 +80,13 @@ To run the tests:
 ```sh
 pytest
 ```
+
+## Release
+
+ideally from within a virtual env as described above...
+```
+pip install build twine
+python -m build
+twine check dist/*
+twine upload dist/*
+```
