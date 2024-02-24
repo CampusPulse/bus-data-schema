@@ -1,8 +1,8 @@
 # rit-housing-data-schema
 
 [![PyPI](https://img.shields.io/pypi/v/rit-housing-data-schema.svg)](https://pypi.org/project/rit-housing-data-schema/)
-[![Changelog](https://img.shields.io/github/v/release/rit-hc-website/rit-housing-data-schema?include_prereleases&label=changelog)](https://github.com/rit-hc-website/rit-housing-data-schema/releases)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rit-hc-website/rit-housing-data-schema/blob/main/LICENSE)
+[![Changelog](https://img.shields.io/github/v/release/CampusPulse/event-data-schema?include_prereleases&label=changelog)](https://github.com/CampusPulse/event-data-schema/releases)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CampusPulse/event-data-schema/blob/main/LICENSE)
 
 Normalized data schema for the output of the data-ingest pipeline.
 
