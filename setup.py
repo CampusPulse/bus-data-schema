@@ -14,7 +14,7 @@ def get_long_description():
 
 
 setup(
-    name="rit-housing-data-schema",
+    name="campuspulse-event-ingest-schema",
     description="Normalized data schema for the output of the data-ingest pipeline.",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
