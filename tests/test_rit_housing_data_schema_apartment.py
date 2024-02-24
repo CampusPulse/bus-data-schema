@@ -4,7 +4,7 @@ import json
 import pydantic.error_wrappers
 import pytest
 
-from rit_housing_data_schema import apartment
+from campuspulse_event_ingest_schema import apartment
 
 from .common import collect_existing_subclasses
 

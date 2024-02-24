@@ -1,6 +1,6 @@
-# rit-housing-data-schema
+# campuspulse-event-ingest-schema
 
-[![PyPI](https://img.shields.io/pypi/v/rit-housing-data-schema.svg)](https://pypi.org/project/rit-housing-data-schema/)
+[![PyPI](https://img.shields.io/pypi/v/campuspulse-event-ingest-schema.svg)](https://pypi.org/project/campuspulse-event-ingest-schema/)
 [![Changelog](https://img.shields.io/github/v/release/CampusPulse/event-data-schema?include_prereleases&label=changelog)](https://github.com/CampusPulse/event-data-schema/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CampusPulse/event-data-schema/blob/main/LICENSE)
 
@@ -11,7 +11,7 @@ Normalized data schema for the output of the data-ingest pipeline.
 Install this library using `pip`:
 
 ```sh
-pip install rit-housing-data-schema
+pip install campuspulse-event-ingest-schema
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ Import this package then use it to construct normalized objects with type
 enforcement.
 
 ```python
-from rit_housing_data_schema import location
+from campuspulse_event_ingest_schema import location
 
 
 location.NormalizedLocation(
@@ -44,7 +44,7 @@ To contribute to this library, first checkout the code. Then create a new
 virtual environment:
 
 ```sh
-cd rit-housing-data-schema
+cd campuspulse-event-ingest-schema
 python -mvenv venv
 source venv/bin/activate
 ```
@@ -72,7 +72,7 @@ To run linters:
 
 ```sh
 mypy .
-flake8 rit_housing_data_schema
+flake8 campuspulse_event_ingest_schema
 ```
 
 To run the tests:
