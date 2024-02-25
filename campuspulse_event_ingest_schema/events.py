@@ -43,24 +43,25 @@ class StringTime(datetime.datetime):
 
 
 class Location(BaseModel):
-        """
-        {
-            "street": str,
-            "city": str,
-            "state": str,
-            "zip": str,
-            "building": str,
-            "room-number": int
+    """
+    {
+        "street": str,
+        "city": str,
+        "state": str,
+        "zip": str,
+        "building": str,
+        "room-number": int
+    
+    }
+    """
+    street: Optional[str]
+    city: Optional[str]
+    state: Optional[str]
+    zipcode: Optional[str]
+    building: Optional[str]
+    room_number: Optional[int]
+
        
-        }
-        """
-        street: Optional[str]
-        city: Optional[str]
-        state: Optional[str]
-        zipcode: Optional[str]
-        building: Optional[str]
-        room_number: Optional[int]
-        
 
 class EventSource(BaseModel):
     source_id:  Optional[str]
