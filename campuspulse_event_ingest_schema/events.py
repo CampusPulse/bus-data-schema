@@ -5,6 +5,7 @@ import datetime
 from pydantic import Field, datetime_parse
 from .common import BaseModel
 from typing import List, Optional
+import datetime
 
 class StringDatetime(datetime.datetime):
 
@@ -61,6 +62,18 @@ class Location(BaseModel):
         room_number: Optional[int]
         
 
+class EventSource(BaseModel):
+    source_id:  Optional[str]
+    source_link: Optional[str]
+    submitter: Optional[str]
+    processed_at: str
+
+class Freebies(BaseModel):
+    
+    has_food: bool
+    merchendise: bool
+    other: Optional[str]
+
 class NormalizedEvent(BaseModel):
     """ name: str,
         event_id: int,   
@@ -90,16 +103,4 @@ class NormalizedEvent(BaseModel):
     is_public: bool
     source: EventSource
 
-        
-
-class EventSource(BaseModel):
-    source_id:  Optional[str]
-    source_link: Optional[str]
-    submitter: Optional[str]
-    processed_at: str
-
-class Freebies(BaseModel):
-    
-    has_food: bool
-    merchendise: bool
-    other: Optional[str]
+ 
