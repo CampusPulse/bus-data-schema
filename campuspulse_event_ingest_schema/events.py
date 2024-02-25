@@ -55,7 +55,7 @@ class Location(BaseModel):
         street: Optional[str]
         city: Optional[str]
         state: Optional[str]
-        zip: Optional[str]
+        zipcode: Optional[str]
         building: Optional[str]
         room_number: Optional[int]
         
