@@ -5,7 +5,6 @@ import datetime
 from pydantic import Field, datetime_parse
 from .common import BaseModel
 from typing import List, Optional
-import datetime
 
 class StringDatetime(datetime.datetime):
 
