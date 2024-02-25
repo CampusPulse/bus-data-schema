@@ -83,6 +83,7 @@ class NormalizedEvent(BaseModel):
     description: Optional[str]
     host: Optional[str]
     is_public: bool
+    source: EventSource
 
         
 
