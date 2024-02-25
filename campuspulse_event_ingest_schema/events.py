@@ -80,6 +80,8 @@ class NormalizedEvent(BaseModel):
     isAllDay: Optional[bool]
     time_start: Optional[StringTime]
     time_end: Optional[StringTime]
+    start: datetime.datetime
+    end: Optional[datetime.datetime]
     duration: Optional[StringTime]
     description: Optional[str]
     # internal notes
@@ -93,6 +95,7 @@ class EventSource(BaseModel):
     source_id:  Optional[str]
     source_link: Optional[str]
     submitter: Optional[str]
+    processed_at: str
 
 class Freebies(BaseModel):
     
