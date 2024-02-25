@@ -83,19 +83,17 @@ class Event(BaseModel):
     duration: Optional[StringTime]
     description: Optional[str]
     host: Optional[str]
+    is_public: bool
 
         
 
-class EventMetadata:
-    def __init__(self, event: Event, tags, is_public, source_id, source_link, submitter):
-        self.event = event
-        self.tags = tags
-        self.is_public = is_public 
-        self.source_id = source_id 
-        self.source_link = source_link
-        self.submitter = submitter
+class EventMetadata(BaseModel):
+    source_id:  Optional[str]
+    source_link: Optional[str]
+    submitter: Optional[str]
 
-class Freebies:
-    def __init__(self, event, freebies):
-        self.event = event
-        self.freebies = freebies
+class Freebies(BaseModel):
+    
+    has_food: bool
+    merchendise: bool
+    other: Optional[str]
