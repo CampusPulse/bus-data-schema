@@ -60,7 +60,7 @@ class Location(BaseModel):
         room_number: Optional[int]
         
 
-class Event(BaseModel):
+class NormalizedEvent(BaseModel):
     """ name: str,
         event_id: int,   
         location: Location, 
@@ -72,9 +72,8 @@ class Event(BaseModel):
         description: str, 
         host: str
     """
-
-    name: Optional[str]
-    event_id: Optional[int]
+    identifier: str
+    title: Optional[str]
     location: Optional[Location]
     date: Optional[StringDate]
     isAllDay: Optional[bool]
@@ -87,7 +86,7 @@ class Event(BaseModel):
 
         
 
-class EventMetadata(BaseModel):
+class EventSource(BaseModel):
     source_id:  Optional[str]
     source_link: Optional[str]
     submitter: Optional[str]
