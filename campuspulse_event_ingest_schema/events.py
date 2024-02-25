@@ -2,7 +2,8 @@
 # https://docs.pydantic.dev/latest/concepts/models/
 
 import datetime
-from pydantic import BaseModel, Field, datetime_parse
+from pydantic import Field, datetime_parse
+from .common import BaseModel
 from typing import List, Optional
 
 class StringDatetime(datetime.datetime):
