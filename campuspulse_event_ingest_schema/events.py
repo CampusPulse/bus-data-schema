@@ -76,11 +76,13 @@ class NormalizedEvent(BaseModel):
     title: Optional[str]
     location: Optional[Location]
     date: Optional[StringDate]
+    # contact
     isAllDay: Optional[bool]
     time_start: Optional[StringTime]
     time_end: Optional[StringTime]
     duration: Optional[StringTime]
     description: Optional[str]
+    # internal notes
     host: Optional[str]
     is_public: bool
     source: EventSource
