@@ -41,6 +41,17 @@ class StringTime(datetime.datetime):
 # print(dt)
 
 
+class Accessibility(BaseModel):
+    #Interpreter Requested, yes, not yet, none available
+    #wheelchair accessible?
+    pass
+
+
+class Contact(BaseModel):
+    name: Optional[str]
+    email: Optional[str]
+    organization: Optional[str]
+
 class Location(BaseModel):
     """
     {
