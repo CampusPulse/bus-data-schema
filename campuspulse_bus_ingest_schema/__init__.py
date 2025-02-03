@@ -1,1 +1,1 @@
-from .schedule import (ArrivalTime, Stop, Route, ServiceAlert)
+from .schedule import (BusSchedule, ArrivalTime, Stop, Route, ServiceAlert)
