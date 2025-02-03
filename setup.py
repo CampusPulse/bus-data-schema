@@ -27,7 +27,7 @@ setup(
     },
     license="MIT",
     version=VERSION,
-    packages=["campuspulse_event_ingest_schema"],
+    packages=["campuspulse_bus_ingest_schema"],
     install_requires=["pydantic[email]~=1.10"],
     extras_require={"test": ["pytest"], "lint": ["flake8", "black", "mypy", "isort"]},
     tests_require=["campuspulse-event-ingest-schema[test]"],
