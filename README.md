@@ -1,8 +1,8 @@
-# campuspulse-event-ingest-schema
+# campuspulse-bus-ingest-schema
 
-[![PyPI](https://img.shields.io/pypi/v/campuspulse-event-ingest-schema.svg)](https://pypi.org/project/campuspulse-event-ingest-schema/)
-[![Changelog](https://img.shields.io/github/v/release/CampusPulse/event-data-schema?include_prereleases&label=changelog)](https://github.com/CampusPulse/event-data-schema/releases)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CampusPulse/event-data-schema/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/campuspulse-bus-ingest-schema.svg)](https://pypi.org/project/campuspulse-bus-ingest-schema/)
+[![Changelog](https://img.shields.io/github/v/release/CampusPulse/event-data-schema?include_prereleases&label=changelog)](https://github.com/CampusPulse/bus-data-schema/releases)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CampusPulse/bus-data-schema/blob/main/LICENSE)
 
 Normalized data schema for the output of the data-ingest pipeline.
 
@@ -11,7 +11,7 @@ Normalized data schema for the output of the data-ingest pipeline.
 Install this library using `pip`:
 
 ```sh
-pip install campuspulse-event-ingest-schema
+pip install campuspulse-bus-ingest-schema
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ To contribute to this library, first checkout the code. Then create a new
 virtual environment:
 
 ```sh
-cd campuspulse-event-ingest-schema
+cd campuspulse-bus-ingest-schema
 python -mvenv venv
 source venv/bin/activate
 ```
