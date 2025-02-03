@@ -7,13 +7,14 @@ from .common import BaseModel
 from typing import List, Dict, Optional
 from pydantic import BaseModel, HttpUrl
 
-class ArrivalTime(BaseModel):
-    time: str
+class Time(BaseModel):
+    arrival: str
+    departure: Optional[str] # departure time. if not present, it is up to the implementor to make a guess. recommendations: either use the same arrival time, or arrival time + 59 seconds, or some other predefined interval based on how long the busses wait at each stop
 
 class Stop(BaseModel):
     stop_id: int
     name: str
-    arrival_times: List[ArrivalTime]
+    times: List[Time]
 
 class Route(BaseModel):
     route_id: str
